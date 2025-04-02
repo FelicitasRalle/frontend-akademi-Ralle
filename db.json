@@ -1,0 +1,21 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Laptop Dell",
+        "category": "laptop",
+        "price": 1200,
+        "stock": 10,
+        "description": "Laptop potente con 16GB RAM y 512GB SSD"
+      },
+      {
+        "id": 2,
+        "name": "iPhone 13",
+        "category": "celular",
+        "price": 999,
+        "stock": 5,
+        "description": "Celular de última generación con cámara avanzada"
+      }
+    ]
+  }
+  
