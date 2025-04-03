@@ -1,0 +1,17 @@
+.banner{
+    background-image: url('../assets/banner\ inicio.png');
+    background-size: 600px;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+.nav{
+    background-color: #6d6875;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.textoNav{
+    color: #ffb4a2;
+    font-weight: bold;
+}
