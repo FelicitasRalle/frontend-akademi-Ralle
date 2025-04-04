@@ -1,4 +1,11 @@
 {
-  "products":[]
+  "products": [
+    {
+      "id": "55cb",
+      "name": "dfsfsd",
+      "description": "dsfdsd",
+      "price": 454,
+      "image": "dfsdfs"
+    }
+  ]
 }
-  

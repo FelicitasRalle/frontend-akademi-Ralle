@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { setProducts } from "../redux/productReducer";
+import { setProducts, addProduct } from "../redux/reducers/productReducer";
 
 function Admin() {
   const dispatch = useDispatch();

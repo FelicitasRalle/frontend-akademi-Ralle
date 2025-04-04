@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import prod1 from "../assets/producto1.jpg";
 import prod2 from "../assets/producto2.jpg";
 import prod3 from "../assets/producto3.jpg";
@@ -49,22 +51,7 @@ const productos = [
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Header */}
-      <header className="nav navbar navbar-expand-lg">
-        <div className="container">
-          <a className="navbar-brand textoNav" href="#">
-            AMARANTA COMPLEMENTOS
-          </a>
-          <div className="navbar-nav">
-            <a className="nav-link textoNav" href="/">
-              Inicio
-            </a>
-            <a className="nav-link textoNav" href="/admin">
-              Administrador
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Banner */}
       <div className="banner"></div>
@@ -91,10 +78,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div>
-        <footer></footer>
-      </div>
+      <Footer />
     </div>
   );
 };

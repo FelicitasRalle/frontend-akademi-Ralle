@@ -1,9 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import productReducer from "./productReducer";
+import { legacy_createStore as createStore, combineReducers } from "redux";
+import { productReducer } from "../reducers/productReducer";
 
-export const store = configureStore({
-  reducer: {
-    productos: productReducer, // <-- clave: productos
-  },
+const rootReducer = combineReducers({
+  productos: productReducer
 });
+
+export const store = createStore(rootReducer);
+
 
