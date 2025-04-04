@@ -1,0 +1,12 @@
+.nav{
+    background-color: #faedcb;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.textoNav{
+    color: #fd8dba;
+    font-weight: bold;
+}
+.textoNav:hover{
+    color: #bf9af5;
+}

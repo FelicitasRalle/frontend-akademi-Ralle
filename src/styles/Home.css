@@ -6,18 +6,6 @@
     text-align: center;
     padding: 100px 0;
 }
-.nav{
-    background-color: #faedcb;
-    padding: 20px;
-    margin-bottom: 50px;
-}
-.textoNav{
-    color: #fd8dba;
-    font-weight: bold;
-}
-.textoNav:hover{
-    color: #bf9af5;
-}
 .boton{
     background-color: #fd8dba;
     border-color: #fd8dba;
