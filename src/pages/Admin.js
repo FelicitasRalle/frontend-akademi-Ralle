@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import * as bootstrap from 'bootstrap';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import stylesheet from "../styles/Admin.css";
 
 function Admin() {
   const dispatch = useDispatch();
@@ -118,8 +119,8 @@ function Admin() {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Administrador de Productos</h2>
+    <div className="container mt-4 contenedorForm">
+      <h2 className="tituloAdmin">Administrador de Productos</h2>
 
       {/* 🔔 Alerta visible si hay mensaje */}
       {alerta.mensaje && (
@@ -134,6 +135,8 @@ function Admin() {
           <input
             type="text"
             name="name"
+            minLength={5}
+            maxLength={30}
             placeholder="Nombre"
             value={form.name}
             onChange={handleChange}
@@ -143,6 +146,8 @@ function Admin() {
           <input
             type="text"
             name="description"
+            minLength={10}
+            maxLength={50}
             placeholder="Descripción"
             value={form.description}
             onChange={handleChange}
@@ -166,7 +171,7 @@ function Admin() {
             onChange={handleChange}
             className="form-control mb-2"
           />
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btnAgregar">
             Agregar Producto
           </button>
         </form>
@@ -249,7 +254,7 @@ function Admin() {
       </div>
 
       {/* Lista de productos */}
-      <h3 className="mt-4">Productos</h3>
+      <h3 className="mt-4 tituloProd">Productos</h3>
       <div className="row">
         {productos.map((prod) => (
           <div key={prod.id} className="col-md-4 mb-3">
@@ -261,13 +266,13 @@ function Admin() {
                 <p className="card-text">${prod.price}</p>
 
                 <button
-                  className="btn btn-warning btn-sm me-2"
+                  className="btn btnEditar btn-sm me-2"
                   onClick={() => handleEdit(prod)}
                 >
                   Editar
                 </button>
                 <button
-                  className="btn btn-danger btn-sm"
+                  className="btn btnEliminar btn-sm"
                   onClick={() => handleDelete(prod.id)}
                 >
                   Eliminar

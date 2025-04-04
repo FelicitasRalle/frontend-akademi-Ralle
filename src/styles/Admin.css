@@ -1,0 +1,42 @@
+.contenedorForm{
+    background-color: #fff7c4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tituloAdmin{
+    text-align: center;
+    color: #bf9af5;
+    font-size: 45px;
+}
+
+.tituloProd{
+    color: #bf9af5;
+    text-align: center;
+}
+
+.btnAgregar{
+    background-color: #88facd;
+    color: black;
+    margin-top: 18px;
+}
+.btnAgregar:hover{
+    border-color: #88facd;
+    border-width: 3px;
+}
+
+.btnEditar{
+    background-color: #c6def1;
+}
+.btnEditar:hover{
+    border-color: #c6def1;
+    border-width: 3px;
+}
+
+.btnEliminar{
+    background-color: #fd8dba;
+}
+.btnEliminar:hover{
+    border-color: #fd8dba;
+    border-width: 3px;
+}

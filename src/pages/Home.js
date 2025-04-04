@@ -51,7 +51,7 @@ const productos = [
 const Home = () => {
   return (
     <div className="home-container">
-      <Header />
+
 
       {/* Banner */}
       <div className="banner"></div>
@@ -78,7 +78,6 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 };
