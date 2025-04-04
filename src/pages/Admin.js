@@ -22,7 +22,45 @@ const Admin = () =>{
     //envio del formulario
     const handleSubmit = (e) =>{
         e.preventDefault();
-    }
+        if(editMode){
+            dispatch(updateProduct(editId, newProduct));
+            setEditMode(false);
+            setEditId(null);
+        }else{
+            dispatch(addProducts(newProduct));
+        }
+        setNewProduct({ nombre: "", descripcion: "", imagen: ""});
+    };
+
+    //editar un prod q ya existe
+    const handleEdit = (producto) => {
+        setNewProduct(producto);
+        setEditMode(true);
+        setEditId(producto.id);
+    };
+
+    return (
+        <div className="admin-container">
+          <h2>Administrador de Productos</h2>
+          <form onSubmit={handleSubmit} className="product-form">
+            <input type="text" name="nombre" value={newProduct.nombre} onChange={handleChange} placeholder="Nombre" required />
+            <input type="text" name="descripcion" value={newProduct.descripcion} onChange={handleChange} placeholder="Descripción" required />
+            <input type="text" name="imagen" value={newProduct.imagen} onChange={handleChange} placeholder="URL de la imagen" required />
+            <button type="submit">{editMode ? "Actualizar" : "Agregar"}</button>
+          </form>
+          <div className="product-list">
+            {productos.map((producto) => (
+              <div key={producto.id} className="product-item">
+                <img src={producto.imagen} alt={producto.nombre} />
+                <h4>{producto.nombre}</h4>
+                <p>{producto.descripcion}</p>
+                <button onClick={() => handleEdit(producto)}>Editar</button>
+                <button onClick={() => dispatch(deleteProduct(producto.id))}>Eliminar</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
 };
 
 export default Admin;
