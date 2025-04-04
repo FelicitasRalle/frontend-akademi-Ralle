@@ -51,6 +51,15 @@ function Admin() {
     }
   };
 
+  handleDelete = async(id) =>{
+    try{
+        await axios.delete(`http://localhost:5000/products/${id}`);
+        dispatch(setProducts(productos.filter((prod) => prod.id !== id)));
+    }catch (error){
+        console.error("Error al eliminar producto: ", error);
+    }
+  };
+
   return (
     <div className="container mt-5">
       <h2>Administrador de Productos</h2>
@@ -104,6 +113,9 @@ function Admin() {
                 <h5 className="card-title">{prod.name}</h5>
                 <p className="card-text">{prod.description}</p>
                 <p className="card-text">${prod.price}</p>
+
+                <button className="btn btn-warning btn-sm me-2" onClick={() => handleEdit(prod)}> Editar </button>
+                <button className="btn btn-danger btn-sm" onClick={() => handleDelete(prod.id)}> Eliminar </button>
               </div>
             </div>
           </div>
