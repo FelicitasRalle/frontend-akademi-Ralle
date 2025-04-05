@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../redux/reducers/productReducer";
-import bannerInicio from "../assets/bannerInicio.png";
+import { Link } from "react-router-dom";
+import bannerInicio from "../images/bannerInicio.png";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -31,14 +32,21 @@ const Home = () => {
               <div key={producto.id} className="col-md-4 mb-4">
                 <div className="card product-card cardProducto">
                   <img
-                    src={producto.image || "https://via.placeholder.com/300x200"}
+                    src={
+                      producto.image || "https://via.placeholder.com/300x200"
+                    }
                     className="card-img-top"
                     alt={producto.name}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{producto.name}</h5>
                     <p className="card-text">{producto.description}</p>
-                    <button className="btn btn-primary boton">Ver más</button>
+                    <Link
+                      to={`/producto/${producto.id}`}
+                      className="btn btn-primary boton"
+                    >
+                      Ver más
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -53,7 +61,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-

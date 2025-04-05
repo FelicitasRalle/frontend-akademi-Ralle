@@ -1,0 +1,10 @@
+.tituloCard {
+  color: #feb27b;
+}
+.btnVolver{
+    background-color: #feb27b;
+}
+.btnVolver:hover{
+    border-color: #feb27b;
+    border-width: 2px;
+}
