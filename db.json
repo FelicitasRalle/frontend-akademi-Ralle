@@ -1,3 +1,18 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "Producto1",
+      "description": "descripcion del producto 1",
+      "price": 4444,
+      "image": "/assets/producto1.jpg",
+      "id": "02cc"
+    },
+    {
+      "id": "62af",
+      "name": "Producto2",
+      "description": "descripcion edl producto 2",
+      "price": 6345673,
+      "image": "/assets/producto2.jpg"
+    }
+  ]
 }

@@ -187,7 +187,7 @@ function Admin() {
         aria-hidden="true"
       >
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className="modal-content modalEditar">
             <form onSubmit={handleSubmit}>
               <div className="modal-header">
                 <h5 className="modal-title" id="editModalLabel">

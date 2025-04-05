@@ -1,11 +1,12 @@
-.banner{
-    background-image: url('../assets/banner\ inicio.png');
-    background-size: 600px;
+.banner {
+    background-image: url('../../public/assets/bannerInicio.png');
+    background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20vh;
+  }
+  
 .boton{
     background-color: #fd8dba;
     border-color: #fd8dba;

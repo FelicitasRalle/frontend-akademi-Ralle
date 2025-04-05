@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Admin from "./pages/Admin";
-import Layout from "./components/Layout"; // Asegurate de tener bien el path
+import Layout from "./components/Layout";
 
 function App() {
   return (

@@ -1,10 +1,10 @@
-// src/pages/Home.js
 import React, { useEffect } from "react";
 import "../styles/Home.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../redux/reducers/productReducer";
+import bannerInicio from "../assets/bannerInicio.png";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -19,8 +19,10 @@ const Home = () => {
 
   return (
     <div className="home-container">
-  
-      <div className="banner"></div>
+      <div
+        className="banner"
+        style={{ backgroundImage: `url(${bannerInicio})` }}
+      ></div>
 
       <div className="container mt-4">
         <div className="row">
@@ -51,6 +53,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
