@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Home.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,6 +10,7 @@ import bannerInicio from "../images/bannerInicio.png";
 const Home = () => {
   const dispatch = useDispatch();
   const productos = useSelector((state) => state.productos.products);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todas");
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -17,6 +18,18 @@ const Home = () => {
       .then((data) => dispatch(setProducts(data)))
       .catch((err) => console.error("Error al cargar productos:", err));
   }, [dispatch]);
+
+  const categorias = [
+    "Todas",
+    ...new Set(productos.map((producto) => producto.category)),
+  ];
+
+  const productosFiltrados =
+    categoriaSeleccionada === "Todas"
+      ? productos
+      : productos.filter(
+          (producto) => producto.category === categoriaSeleccionada
+        );
 
   return (
     <div className="home-container">
@@ -26,9 +39,23 @@ const Home = () => {
       ></div>
 
       <div className="container mt-4">
+        <div className="d-flex justify-content-end mb-3">
+          <select
+            className="form-select w-auto"
+            value={categoriaSeleccionada}
+            onChange={(e) => setCategoriaSeleccionada(e.target.value)}
+          >
+            {categorias.map((categoria, idx) => (
+              <option key={idx} value={categoria}>
+                {categoria}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="row">
-          {productos && productos.length > 0 ? (
-            productos.map((producto) => (
+          {productosFiltrados && productosFiltrados.length > 0 ? (
+            productosFiltrados.map((producto) => (
               <div key={producto.id} className="col-md-4 mb-4">
                 <div className="card product-card cardProducto">
                   <img
@@ -61,3 +88,4 @@ const Home = () => {
 };
 
 export default Home;
+

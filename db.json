@@ -31,6 +31,14 @@
       "category": "coleros",
       "price": 54646,
       "image": "/assets/producto4.jpg"
+    },
+    {
+      "id": "c82e",
+      "name": "Producto5",
+      "description": "dsfsfdsfsdfsdfddef",
+      "category": "trabas",
+      "price": 43534,
+      "image": "/assets/producto5.jpg"
     }
   ]
 }
