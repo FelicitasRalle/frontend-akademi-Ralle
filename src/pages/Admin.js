@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { setProducts } from "../redux/reducers/productReducer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import * as bootstrap from 'bootstrap';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import * as bootstrap from "bootstrap";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import stylesheet from "../styles/Admin.css";
@@ -17,6 +17,7 @@ function Admin() {
   const [form, setForm] = useState({
     name: "",
     description: "",
+    category: "",
     price: "",
     image: "",
   });
@@ -88,7 +89,13 @@ function Admin() {
         await fetchProducts();
       }
 
-      setForm({ name: "", description: "", price: "", image: "" });
+      setForm({
+        name: "",
+        description: "",
+        category: "",
+        price: "",
+        image: "",
+      });
     } catch (error) {
       console.error("Error al enviar producto:", error);
     }
@@ -108,6 +115,7 @@ function Admin() {
     setForm({
       name: producto.name,
       description: producto.description,
+      category: producto.category,
       price: producto.price,
       image: producto.image,
     });
@@ -155,6 +163,18 @@ function Admin() {
             className="form-control mb-2"
             required
           />
+          <select
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            className="form-control mb-3"
+            required
+          >
+            <option value="">Seleccionar categoría</option>
+            <option value="vinchas">Vinchas</option>
+            <option value="coleros">Coleros</option>
+            <option value="trabas">Trabas</option>
+          </select>
           <input
             type="number"
             name="price"
@@ -219,6 +239,18 @@ function Admin() {
                   className="form-control mb-2"
                   required
                 />
+                <select
+                  name="category"
+                  value={form.category}
+                  onChange={handleChange}
+                  className="form-control mb-2"
+                  required
+                >
+                  <option value="">Seleccionar categoría</option>
+                  <option value="vinchas">Vinchas</option>
+                  <option value="coleros">Coleros</option>
+                  <option value="trabas">Trabas</option>
+                </select>
                 <input
                   type="number"
                   name="price"
@@ -264,6 +296,11 @@ function Admin() {
               <div className="card-body">
                 <h5 className="card-title">{prod.name}</h5>
                 <p className="card-text">{prod.description}</p>
+                {prod.category && (
+                  <p className="card-text">
+                    <strong>Categoría:</strong> {prod.category}
+                  </p>
+                )}
                 <p className="card-text">${prod.price}</p>
 
                 <button
@@ -288,5 +325,3 @@ function Admin() {
 }
 
 export default Admin;
-
-

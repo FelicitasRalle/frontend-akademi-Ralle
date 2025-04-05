@@ -1,3 +1,36 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "4c6a",
+      "name": "Producto1",
+      "description": "vincha con flores de color rosa",
+      "category": "vinchas",
+      "price": 3432,
+      "image": "/assets/producto1.jpg"
+    },
+    {
+      "id": "c508",
+      "name": "Producto2",
+      "description": "sdfdsghfsdjhfuisdf",
+      "category": "vinchas",
+      "price": 45345,
+      "image": "/assets/producto2.jpg"
+    },
+    {
+      "id": "539b",
+      "name": "Producto3",
+      "description": "sdafasdasd",
+      "category": "coleros",
+      "price": 3242,
+      "image": "/assets/producto3.jpg"
+    },
+    {
+      "id": "664e",
+      "name": "Producto4",
+      "description": "cvzcvdafsd",
+      "category": "coleros",
+      "price": 54646,
+      "image": "/assets/producto4.jpg"
+    }
+  ]
 }
