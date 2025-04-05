@@ -85,6 +85,7 @@ function Admin() {
         );
         dispatch(setProducts([...productos, res.data]));
         mostrarAlerta("Producto agregado correctamente ✅", "success");
+        await fetchProducts();
       }
 
       setForm({ name: "", description: "", price: "", image: "" });

@@ -40,3 +40,15 @@
     border-color: #fd8dba;
     border-width: 3px;
 }
+
+.btnModal{
+    background-color: #fd8dba;
+}
+.btnModal:hover{
+    border-color: #fd8dba;
+    border-width: 3px;
+}
+
+.modalEditar{
+    background-color: #fff7c4;
+}

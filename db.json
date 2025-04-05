@@ -1,11 +1,3 @@
 {
-  "products": [
-    {
-      "name": "Vincha1",
-      "description": "vincha con flores de color rosa",
-      "price": 500,
-      "image": "",
-      "id": "8990"
-    }
-  ]
+  "products": []
 }
