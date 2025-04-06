@@ -1,60 +1,52 @@
 {
   "products": [
     {
-      "id": "4c6a",
-      "name": "Producto1",
-      "description": "vincha con flores de color rosa",
+      "name": "Vincha Crochet",
+      "description": "Vincha hecha exclusivamente a crochet, con perlas para un toque elegante y unico.",
       "category": "vinchas",
-      "price": 3432,
-      "image": "/assets/producto1.jpg"
+      "price": 5000,
+      "image": "/assets/vinchaCirculos.jpg",
+      "id": "f65d"
     },
     {
-      "id": "c508",
-      "name": "Producto2",
-      "description": "sdfdsghfsdjhfuisdf",
+      "name": "Coleros Flores",
+      "description": "Coleros de crochet que vienen apares ideales para combinar los outfits de las mas pequeñas.",
+      "category": "coleros",
+      "price": 3500,
+      "image": "/assets/colerosFlor.jpg",
+      "id": "383e"
+    },
+    {
+      "name": "Vincha con Puntilla",
+      "description": "Vincha que combina crochet y puntilla dando una elegancia unica para tus outfits.",
       "category": "vinchas",
-      "price": 45345,
-      "image": "/assets/producto2.jpg"
+      "price": 6000,
+      "image": "/assets/vinchaPuntilla.jpg",
+      "id": "d45c"
     },
     {
-      "id": "539b",
-      "name": "Producto3",
-      "description": "sdafasdasd",
-      "category": "coleros",
-      "price": 3242,
-      "image": "/assets/producto3.jpg"
+      "id": "69f0",
+      "name": "Vincha de Moño",
+      "description": "Vincha elastizada con moños en diferentes colores, super lindas y comodas.",
+      "category": "vinchas",
+      "price": 3500,
+      "image": "/assets/vinchaElastizadaMoño.jpg"
     },
     {
-      "id": "664e",
-      "name": "Producto4",
-      "description": "cvzcvdafsd",
-      "category": "coleros",
-      "price": 54646,
-      "image": "/assets/producto4.jpg"
-    },
-    {
-      "id": "c82e",
-      "name": "Producto5",
-      "description": "dsfsfdsfsdfsdfddef",
+      "id": "4037",
+      "name": "Trabas Tic-Tac de Flores",
+      "description": "Pares de trabas de crochet, con flores super bonitas para las más chiquitas.",
       "category": "trabas",
-      "price": 43534,
-      "image": "/assets/producto5.jpg"
+      "price": 4000,
+      "image": "/assets/trabasFlores.jpg"
     },
     {
-      "id": "04c6",
-      "name": "Producto6",
-      "description": "dfssdfwerewfds",
+      "id": "65fc",
+      "name": "Coleros Moños",
+      "description": "Coleros individuales de moños, lisos y estampados.",
       "category": "coleros",
-      "price": 3424323,
-      "image": "/assets/producto6.jpg"
-    },
-    {
-      "id": "85d1",
-      "name": "Producto7",
-      "description": "dfsdfsfdsfsdf",
-      "category": "vinchas",
-      "price": 435345,
-      "image": "/assets/producto2.jpg"
+      "price": 3500,
+      "image": "/assets/colerosMoños.jpg"
     }
   ]
 }

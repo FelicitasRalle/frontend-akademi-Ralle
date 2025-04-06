@@ -24,16 +24,22 @@ const Home = () => {
 
   const categorias = ["Todas", "vinchas", "coleros", "trabas"];
 
-  const productosFiltrados = categoriaSeleccionada === "Todas"
-    ? productos
-    : productos.filter(
-        (producto) => producto.category === categoriaSeleccionada
-      );
+  const productosFiltrados =
+    categoriaSeleccionada === "Todas"
+      ? productos
+      : productos.filter(
+          (producto) => producto.category === categoriaSeleccionada
+        );
 
   const indexUltimoProducto = paginaActual * productosPorPagina;
   const indexPrimerProducto = indexUltimoProducto - productosPorPagina;
-  const productosPaginados = productosFiltrados.slice(indexPrimerProducto, indexUltimoProducto);
-  const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
+  const productosPaginados = productosFiltrados.slice(
+    indexPrimerProducto,
+    indexUltimoProducto
+  );
+  const totalPaginas = Math.ceil(
+    productosFiltrados.length / productosPorPagina
+  );
 
   const cambiarPagina = (numero) => {
     setPaginaActual(numero);
@@ -78,7 +84,7 @@ const Home = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title">{producto.name}</h5>
-                    <p className="card-text">{producto.description}</p>
+                    <p className="card-text">${producto.price}</p>
                     <Link
                       to={`/producto/${producto.id}`}
                       className="btn btn-primary boton"
@@ -99,13 +105,23 @@ const Home = () => {
           <div className="d-flex justify-content-center mt-4">
             <nav>
               <ul className="pagination">
-                {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (
-                  <li key={num} className={`page-item ${paginaActual === num ? "active" : ""}`}>
-                    <button className="page-link" onClick={() => cambiarPagina(num)}>
-                      {num}
-                    </button>
-                  </li>
-                ))}
+                {Array.from({ length: totalPaginas }, (_, i) => i + 1).map(
+                  (num) => (
+                    <li
+                      key={num}
+                      className={`page-item ${
+                        paginaActual === num ? "active" : ""
+                      }`}
+                    >
+                      <button
+                        className="page-link"
+                        onClick={() => cambiarPagina(num)}
+                      >
+                        {num}
+                      </button>
+                    </li>
+                  )
+                )}
               </ul>
             </nav>
           </div>
@@ -116,4 +132,5 @@ const Home = () => {
 };
 
 export default Home;
+
 

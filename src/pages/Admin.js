@@ -161,7 +161,7 @@ function Admin() {
             type="text"
             name="description"
             minLength={10}
-            maxLength={50}
+            maxLength={150}
             placeholder="Descripción"
             value={form.description}
             onChange={handleChange}
