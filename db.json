@@ -39,6 +39,22 @@
       "category": "trabas",
       "price": 43534,
       "image": "/assets/producto5.jpg"
+    },
+    {
+      "id": "04c6",
+      "name": "Producto6",
+      "description": "dfssdfwerewfds",
+      "category": "coleros",
+      "price": 3424323,
+      "image": "/assets/producto6.jpg"
+    },
+    {
+      "id": "85d1",
+      "name": "Producto7",
+      "description": "dfsdfsfdsfsdf",
+      "category": "vinchas",
+      "price": 435345,
+      "image": "/assets/producto2.jpg"
     }
   ]
 }

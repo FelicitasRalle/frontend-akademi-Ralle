@@ -20,3 +20,13 @@
     border-color: #bf9af5;
     border-width: 3px;
 }
+.pagination .page-link {
+    color: #bf9af5;
+    border-color: #bf9af5;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #bf9af5;
+    border-color: #bf9af5;
+    color: white;
+  }
