@@ -13,6 +13,7 @@ function Admin() {
   const dispatch = useDispatch();
   const productos = useSelector((state) => state.productos.products);
   const modalRef = useRef(null);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("todos");
 
   const [form, setForm] = useState({
     name: "",
@@ -126,6 +127,10 @@ function Admin() {
     const modal = new bootstrap.Modal(modalRef.current);
     modal.show();
   };
+  const productosFiltrados =
+    categoriaSeleccionada === "todos"
+      ? productos
+      : productos.filter((p) => p.category === categoriaSeleccionada);
 
   return (
     <div className="container mt-4 contenedorForm">
@@ -288,8 +293,25 @@ function Admin() {
 
       {/* Lista de productos */}
       <h3 className="mt-4 tituloProd">Productos</h3>
+      <div className="mb-3">
+        <label htmlFor="filtroCategoria" className="form-label">
+          Filtrar por categoría:
+        </label>
+        <select
+          id="filtroCategoria"
+          className="form-select"
+          value={categoriaSeleccionada}
+          onChange={(e) => setCategoriaSeleccionada(e.target.value)}
+        >
+          <option value="todos">Todos</option>
+          <option value="vinchas">Vinchas</option>
+          <option value="coleros">Coleros</option>
+          <option value="trabas">Trabas</option>
+        </select>
+      </div>
+
       <div className="row">
-        {productos.map((prod) => (
+        {productosFiltrados.map((prod) => (
           <div key={prod.id} className="col-md-4 mb-3">
             <div className="card">
               <img src={prod.image} alt={prod.name} className="card-img-top" />
