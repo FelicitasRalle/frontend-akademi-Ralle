@@ -2,6 +2,7 @@
     background-color: #faedcb;
     padding: 20px;
     margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .textoNav{
     color: #fd8dba;

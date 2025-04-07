@@ -1,7 +1,10 @@
 .contenedorForm{
-    background-color: #fff7c4;
-    border-radius: 8px;
-    padding: 20px;
+    background-color: #fff6e9;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tituloAdmin{
@@ -16,12 +19,12 @@
 }
 
 .btnAgregar{
-    background-color: #88facd;
+    background-color: #c6def1;
     color: black;
     margin-top: 18px;
 }
 .btnAgregar:hover{
-    border-color: #88facd;
+    border-color: #c6def1;
     border-width: 3px;
 }
 
@@ -41,14 +44,31 @@
     border-width: 3px;
 }
 
-.btnModal{
+.btnGuardarModal{
     background-color: #fd8dba;
 }
-.btnModal:hover{
+.btnGuardarModal:hover{
     border-color: #fd8dba;
     border-width: 3px;
 }
 
-.modalEditar{
-    background-color: #fff7c4;
+.btnCancelarModal{
+    background-color: #bababa;
 }
+.btnCancelarModal:hover{
+    border-color: #bababa;
+    border-width: 3px;
+}
+
+.modalEditar{
+    background-color: #fff6e9;
+}
+
+input, select {
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+  }

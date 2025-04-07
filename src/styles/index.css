@@ -4,5 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1, h2, h3, .nav, .textoNav{
   font-family: 'Playfair Display', serif;
+}
+body, p, .cardProducto{
+  font-family: 'Roboto Slab', serif;
 }

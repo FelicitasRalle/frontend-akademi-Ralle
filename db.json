@@ -33,12 +33,12 @@
       "image": "/assets/vinchaElastizadaMoño.jpg"
     },
     {
-      "id": "4037",
       "name": "Trabas Tic-Tac de Flores",
       "description": "Pares de trabas de crochet, con flores super bonitas para las más chiquitas.",
       "category": "trabas",
       "price": 4000,
-      "image": "/assets/trabasFlores.jpg"
+      "image": "/assets/trabasFlores.jpg",
+      "id": "4037"
     },
     {
       "id": "65fc",

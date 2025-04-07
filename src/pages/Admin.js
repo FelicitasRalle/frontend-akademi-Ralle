@@ -230,6 +230,8 @@ function Admin() {
                   type="text"
                   name="name"
                   placeholder="Nombre"
+                  minLength={5}
+                  maxLength={30}
                   value={form.name}
                   onChange={handleChange}
                   className="form-control mb-2"
@@ -239,6 +241,8 @@ function Admin() {
                   type="text"
                   name="description"
                   placeholder="Descripción"
+                  minLength={10}
+                  max={150}
                   value={form.description}
                   onChange={handleChange}
                   className="form-control mb-2"
@@ -277,12 +281,12 @@ function Admin() {
               <div className="modal-footer">
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  className="btn btnCancelarModal"
                   data-bs-dismiss="modal"
                 >
                   Cancelar
                 </button>
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btnGuardarModal">
                   Guardar Cambios
                 </button>
               </div>
